@@ -71,16 +71,16 @@ function Jurnal() {
   const handleExportToExcel = () => {
     const exportData = filteredBooks.map((book, index) => ({
       '№': (currentPage - 1) * ITEMS_PER_PAGE + index + 1,
-      'Title': book.title,
+      'Kitoblar nomi': book.title,
     }));
   
     exportData.push({
       '№': '',
-      'Title': `Jami kitoblar: ${filteredBooks.length}`
+      'Kitoblar nomi': `Jami kitoblar soni: ${filteredBooks.length}`
     });
   
     const ws = XLSX.utils.json_to_sheet(exportData, {
-      header: ["№", "Title"],
+      header: ["№", "Kitoblar nomi"],
       skipHeader: false,
     });
   
@@ -112,7 +112,7 @@ function Jurnal() {
         />
         <SearchIcon />
         </Searcht>
-        <ExelButton onClick={handleExportToExcel}>EXPORT TO EXCEL ></ExelButton>
+        <ExelButton onClick={handleExportToExcel}>Yuklab Olish</ExelButton>
         {/* <button onClick={() => setIsFilterModalVisible(true)}>Open Filter</button> */}
       </SearchContainer>
       <Wrapper>
@@ -136,7 +136,7 @@ function Jurnal() {
         <TableHead>
           <TableRow className="th">
             <TableCell className="thc">№</TableCell>
-            <TableCell className="thc">Title</TableCell>
+            <TableCell className="thc">Kitoblar nomi</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

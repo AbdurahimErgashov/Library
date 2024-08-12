@@ -70,16 +70,16 @@ function Dissertation() {
   const handleExportToExcel = () => {
     const exportData = filteredBooks.map((book, index) => ({
       '№': (currentPage - 1) * ITEMS_PER_PAGE + index + 1,
-      'Title': book.title,
+      'Kitoblar nomi': book.title,
     }));
   
     exportData.push({
       '№': '',
-      'Title': `Jami kitoblar: ${filteredBooks.length}`
+      'Kitoblar nomi': `Jami kitoblar soni: ${filteredBooks.length}`
     });
   
     const ws = XLSX.utils.json_to_sheet(exportData, {
-      header: ["№", "Title"],
+      header: ["№", "Kitoblar nomi"],
       skipHeader: false,
     });
   
@@ -105,13 +105,13 @@ function Dissertation() {
         <Searcht>
         <SerachInput
           type="text"
-          placeholder="Search books..."
+          placeholder="Qidiruv ..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <SearchIcon />
         </Searcht>
-        <ExelButton onClick={handleExportToExcel}>EXPORT TO EXCEL ></ExelButton>
+        <ExelButton onClick={handleExportToExcel}>Yuklab Olish</ExelButton>
         {/* <button onClick={() => setIsFilterModalVisible(true)}>Open Filter</button> */}
       </SearchContainer>
       <Wrapper>
@@ -135,7 +135,7 @@ function Dissertation() {
         <TableHead>
           <TableRow className="th">
             <TableCell className="thc">№</TableCell>
-            <TableCell className="thc">Title</TableCell>
+            <TableCell className="thc">Kitoblar Nomi</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
