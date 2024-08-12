@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Language,
@@ -26,6 +27,7 @@ function Filter({
   const [visibleLettersCount, setVisibleLettersCount] = useState(3);
 
   const { data: booksData, loading, error } = useFetch("books/");
+  const navigate = useNavigate(); // useNavigate hookini chaqirish
 
   useEffect(() => {
     if (booksData) {
@@ -61,6 +63,12 @@ function Filter({
 
   const handleMoreLetters = () => {
     setVisibleLettersCount((prev) => prev + 3);
+  };
+
+  const handleLogout = () => {
+    // Chiqish (log out) funksiyasini bajarish, agar zarur bo'lsa
+    // Masalan: localStorage.clear(); sessionStorage.clear();
+    navigate('/login'); // LogIN sahifasiga yo'naltirish
   };
 
   if (loading) return <p>Loading...</p>;
@@ -105,6 +113,7 @@ function Filter({
           )}
         </Letter>
         <Text>Umumiy Kitoblar soni: {filteredBooksCount}</Text>
+        <MoreButton onClick={handleLogout}>Chiqish</MoreButton> {/* Chiqish tugmasi */}
       </Wrapper>
     </Container>
   );

@@ -48,8 +48,7 @@ function Navbar() {
   }, [date]);
 
   const handleLogoClick = () => {
-    navigate('/');
-    window.location.reload();
+    navigate('/login'); // LogIN sahifasiga o'tish
   };
 
   const toggleNavLinks = () => {
