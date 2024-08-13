@@ -66,9 +66,7 @@ function Filter({
   };
 
   const handleLogout = () => {
-    // Chiqish (log out) funksiyasini bajarish, agar zarur bo'lsa
-    // Masalan: localStorage.clear(); sessionStorage.clear();
-    navigate('/login'); // LogIN sahifasiga yo'naltirish
+    navigate('/login'); 
   };
 
   if (loading) return <p>Loading...</p>;
