@@ -147,7 +147,7 @@ export const SearchContainer = styled.div`
   justify-content: space-between;
   background-color: #311E5C;
   position: sticky;
-  top: 10%; /* Adjust this as needed */
+  top: 22%; 
   
   @media (min-width: 2000px) {
     top: 23%;

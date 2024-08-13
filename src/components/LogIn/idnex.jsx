@@ -12,7 +12,7 @@ function LogIN({ onLogin }) {
     e.preventDefault();
 
     if (!username || !password) {
-      setError('Inputlar bosh');
+      setError(`Inputlarni To'ldiring`);
     } else if (username === 'admin12' && password === 'admin12') {
       setError('');
       onLogin();
