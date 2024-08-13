@@ -147,19 +147,30 @@ export const SearchContainer = styled.div`
   justify-content: space-between;
   background-color: #311E5C;
   position: sticky;
-  top: 22%;
-  @media (max-width: 1880px) {
-    top: 24.3%;
+  top: 10%; /* Adjust this as needed */
+  
+  @media (min-width: 2000px) {
+    top: 23%;
   }
+  
+  @media (min-width: 2500px) {
+    top: 18%;
+  }
+
+  @media (max-width: 1880px) {
+    top: 22.7%;
+  }
+  
   @media (max-width: 1500px) {
     top: 24%;
   }
-  /* margin-left: 6.1vw; */
+
   @media (max-width: 545px) {
     width: 100%;
     margin-left: 0;
   }
 `;
+
 
 export const SearchIcon = styled(FaSearch)`
   /* margin-left: -72.5%; */

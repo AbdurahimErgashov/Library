@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Form, User, Passwords, Button, Error } from './styled';
 
-function LogIN() {
+function LogIN({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // Xato xabarini saqlash uchun holat
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Inputlar tekshirish
     if (!username || !password) {
-      setError(`Inputlarni To'ldiring`); // Inputlar bo'sh bo'lsa xato xabarini o'rnatish
+      setError('Inputlar bosh');
     } else if (username === 'admin12' && password === 'admin12') {
       setError('');
+      onLogin();
       navigate('/home');
     } else {
-      setError('Noto‘g‘ri foydalanuvchi nomi yoki parol'); // Xato xabarini o'rnatish
+      setError('Noto‘g‘ri foydalanuvchi nomi yoki parol');
     }
   };
 
   return (
     <Container>
       <Form onSubmit={handleLogin}>
-        {error && <Error>{error}</Error>} {/* Xato xabarini ko'rsatish */}
+        {error && <Error>{error}</Error>}
         <User
           type="text"
           value={username}
