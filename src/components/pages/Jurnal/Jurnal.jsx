@@ -106,7 +106,7 @@ function Jurnal() {
         <Searcht>
         <SerachInput
           type="text"
-          placeholder="Search books..."
+          placeholder="Qidiruv..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
