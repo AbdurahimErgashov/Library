@@ -32,9 +32,15 @@ export const Wrapper =styled.div`
 `
 export const Table = styled(MuiTable)`
   width: 80% !important;
+  @media (max-width: 1880px){
+    margin-top: 60px;
+  }
   @media (max-width: 950px) {
     width: 100% !important;
     margin-left: 0;
+  }
+  @media (min-width: 2000px) {
+    margin-top: 60px;
   }
 `;
 
@@ -147,8 +153,23 @@ export const SearchContainer = styled.div`
   justify-content: space-between;
   background-color: #311E5C;
   position: fixed;
-  top: 24.1% !important; 
+  top: 22%; 
+  
+  @media (min-width: 2000px) {
+    top: 22.75%;
+  }
+  
+  @media (min-width: 2500px) {
+    top: 18%;
+  }
 
+  @media (max-width: 1880px) {
+    top: 23%;
+  }
+  
+  @media (max-width: 1500px) {
+    top: 23%;
+  }
 
   @media (max-width: 545px) {
     width: 100%;
