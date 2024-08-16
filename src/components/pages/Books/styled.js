@@ -32,6 +32,7 @@ export const Wrapper =styled.div`
 `
 export const Table = styled(MuiTable)`
   width: 80% !important;
+  margin-top: 60px;
   @media (max-width: 1880px){
     margin-top: 60px;
   }
@@ -146,7 +147,7 @@ export const SerachInput = styled.input`
   }
 `;
 
-export const SearchContainer = styled.div`
+export const  SearchContainer = styled.div`
   display: flex;
   width: 100%;
   height: 60px;
@@ -164,7 +165,7 @@ export const SearchContainer = styled.div`
   }
 
   @media (max-width: 1880px) {
-    top: 23%;
+    top: 24%;
   }
   
   @media (max-width: 1500px) {
