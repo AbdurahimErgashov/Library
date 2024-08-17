@@ -169,7 +169,7 @@ export const  SearchContainer = styled.div`
   }
   
   @media (max-width: 1500px) {
-    top: 23%;
+    top: 24%;
   }
 
   @media (max-width: 545px) {

@@ -18,6 +18,8 @@ export const Container = styled.div`
     position: relative;
     width: 100%;
   }
+    
+
   @media (max-width: 950px) {
     display: none;
     position: absolute;
@@ -33,7 +35,7 @@ export const Wrapper =styled.div`
   top: 30%;
   @media (max-width: 1500px) {
       position: fixed;
-      top: 32%;
+      top: 34%;
   }
   /* @media (max-width: 1800px) {
     margin-top: 95%;
