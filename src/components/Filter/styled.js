@@ -37,6 +37,7 @@ export const Wrapper =styled.div`
       position: fixed;
       top: 34%;
   }
+
   @media (max-width: 1500px) {
       position: fixed;
       top: 34%;
@@ -87,6 +88,10 @@ export const Text =styled.p`
   margin-left: 50px;
   
   margin-bottom: 10px;
+  @media (max-height: 730px){
+    font-size: 15px;
+    margin-bottom: 1px;
+} 
 `
 export const LanguageText = styled.label`
   display: flex;
@@ -143,4 +148,7 @@ export const MoreButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+  @media (max-height: 730px){
+    margin-bottom: 14px;
+}
 `;
