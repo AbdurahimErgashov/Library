@@ -33,6 +33,10 @@ export const Wrapper =styled.div`
   position: fixed;
   width: 18%;
   top: 30%;
+  @media (max-width: 1900px) {
+      position: fixed;
+      top: 34%;
+  }
   @media (max-width: 1500px) {
       position: fixed;
       top: 34%;
