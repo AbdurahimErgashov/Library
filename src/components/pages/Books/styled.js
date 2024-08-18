@@ -176,6 +176,10 @@ export const SearchContainer = styled.div`
   @media (max-height: 730px) {
     top: 27%;
   }
+  @media (max-height:650px) {
+    top: 31%;
+  }
+ 
 `;
 
 export const SearchIcon = styled(FaSearch)`
