@@ -174,11 +174,14 @@ export const SearchContainer = styled.div`
     margin-left: 0;
   }
   @media (max-height: 730px) {
-    top: 27%;
+    top: 28%;
   }
-  @media (max-height:650px) {
-    top: 31%;
+  @media (max-height:680px) {
+    top: 30%;
   }
+  /* @media (max-height:850px) {
+    top: 26%;
+  } */
  
 `;
 

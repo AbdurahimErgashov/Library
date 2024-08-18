@@ -32,6 +32,7 @@ export const Wrapper = styled.div`
   position: fixed;
   width: 18%;
   top: 30%;
+
   @media (max-width: 1900px) {
     position: fixed;
     top: 34%;
@@ -41,8 +42,12 @@ export const Wrapper = styled.div`
     position: fixed;
     top: 34%;
   }
-  @media (max-height: 650px) {
-    top: 40%;
+  @media (max-height: 850px) {
+    top: 34%;
+  }
+  @media (max-height: 680px) {
+
+    top: 39%;
   }
 
   /* @media (max-width: 1800px) {
@@ -75,10 +80,16 @@ export const Wrapper = styled.div`
 `;
 export const Language = styled.div`
   width: 100%;
-  @media (max-height: 650px) {
-    max-height: 150px;
+  @media (max-height: 680px) {
+    max-height: 170px;
     overflow-y: auto;
     overflow-x: hidden;
+    ::-webkit-scrollbar {
+    width: 0;  /* Chrome, Safari va Opera uchun */
+    background: transparent;
+  }
+  -ms-overflow-style: none;  /* IE va Edge uchun */
+  scrollbar-width: none;  /* Firefox uchun */
   }
 `;
 export const FilterText = styled.p`
@@ -91,9 +102,18 @@ export const FilterText = styled.p`
 `;
 export const Letter = styled.div`
   margin-bottom: 16px;
-  max-height: 150px; // Set your desired max-height
-  overflow-y: auto;
-  overflow-x: hidden;
+  @media (max-height: 680px) {
+    max-height:170px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 8px;
+    ::-webkit-scrollbar {
+    width: 0;  /* Chrome, Safari va Opera uchun */
+    background: transparent;
+  }
+  -ms-overflow-style: none;  /* IE va Edge uchun */
+  scrollbar-width: none;  /* Firefox uchun */
+  }
 `;
 export const Text = styled.p`
   font-size: 19px;
@@ -105,9 +125,14 @@ export const Text = styled.p`
     font-size: 15px;
     margin-bottom: 1px;
   }
-  @media (max-height: 650px) {
+  @media (max-height: 680px) {
     font-size: 13px;
+    
   }
+  /* @media (max-height: 850px) {
+    font-size: 16px;
+  } */
+
 `;
 export const LanguageText = styled.label`
   display: flex;
@@ -171,7 +196,11 @@ export const MoreButton = styled.button`
   @media (max-height: 730px) {
     margin-bottom: 14px;
   }
-  @media (max-height: 650px) {
+  @media (max-height: 680px) {
     margin-bottom: 5px;
+    padding: 3px 10px;
   }
+  /* @media (max-height: 850px) {
+    margin-bottom: 5px;
+  } */
 `;
