@@ -173,7 +173,10 @@ export const SearchContainer = styled.div`
   }
 
   @media (max-height: 730px) {
-    top: 27.4%;
+    top: 28%;
+  }
+  @media (max-height:680px) {
+    top: 30%;
   }
 `;
 

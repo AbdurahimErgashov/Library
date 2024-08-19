@@ -46,7 +46,6 @@ export const Wrapper = styled.div`
     top: 34%;
   }
   @media (max-height: 680px) {
-
     top: 39%;
   }
 
